@@ -22,7 +22,7 @@
 
         </form>
         <div>
-            <table>
+            <table class="table">
                 <thead>
                 <th>Nome</th>
                 <th>Email</th>
@@ -48,9 +48,17 @@
                     {nome: 'Agata Karol', email: 'agata@gmail.com', nota: 8 }
                 ]
             }
-
-
         })
     </script>
+    <style>
+        .table{
+            margin-top: 20px;
+            width: 100%;
+            text-align: left;
+        }
+        .table th, .table td{
+            border-top: 1px solid #bbb;
+        }
+    </style>
 </body>
 </html>
