@@ -3,42 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Web Base from QA Ninja</title>
+    <script src="js/vue.js"></script>
 </head>
 <body>
-    <h1>Aqui vai um vai um título</h1>
-    <form>
-        <label for="nomeCompleto">Nome Completo</label>
-        <input name="nomeCompleto" type="text">
+    <div id="app">
+        <h1>Aqui vai um vai um título</h1>
+        <form>
+            <label for="nomeCompleto">Nome Completo</label>
+            <input name="nomeCompleto" type="text">
 
-        <label for="email">Email</label>
-        <input name="email" type="text">
+            <label for="email">Email</label>
+            <input name="email" type="text">
 
-        <label for="nota">Nota</label>
-        <input name="nota" type="text">
+            <label for="nota">Nota</label>
+            <input name="nota" type="text">
 
-        <input type="button" value="Cadastrar">
+            <input type="button" value="Cadastrar">
 
-    </form>
-    <div>
-        <table>
-            <thead>
+        </form>
+        <div>
+            <table>
+                <thead>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Nota</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Anderson Silva</td>
-                    <td>asilva@gmail.com</td>
-                    <td>10.0</td>
-                </tr>
-                <tr>
-                    <td>Maria Silva</td>
-                    <td>maria@gmail.com</td>
-                    <td>10.0</td>
-                </tr>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <tr v-for="aluno in alunos">
+                        <td>{{aluno.nome}}</td>
+                        <td>{{aluno.email}}</td>
+                        <td>{{aluno.nota}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
+    <script>
+        var app =  new Vue({
+            el: "#app",
+            data: {
+                alunos: [
+                    {nome: 'Anderson Silva', email: 'asilva@gmail.com', nota: 10 },
+                    {nome: 'Maria Luiza', email: 'maria@gmail.com', nota: 9 },
+                    {nome: 'Agata Karol', email: 'agata@gmail.com', nota: 8 }
+                ]
+            }
+
+
+        })
+    </script>
 </body>
 </html>
