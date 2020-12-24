@@ -18,11 +18,8 @@
             <label for="nota">Nota</label>
             <input name="nota" type="text" v-model="form.nota">
 
-            <input type="button" value="Cadastrar">
+            <input type="button" value="Cadastrar" @click="adicionarContatos">
         </form>
-        <span>
-            {{form.nome}} - {{form.email}} - {{form.nota}}
-        </span>
         <div>
             <table class="table">
                 <thead>
@@ -50,11 +47,20 @@
                     nota: ''
 
                 },
-                alunos: [
-                    {nome: 'Anderson Silva', email: 'asilva@gmail.com', nota: 10 },
-                    {nome: 'Maria Luiza', email: 'maria@gmail.com', nota: 9 },
-                    {nome: 'Agata Karol', email: 'agata@gmail.com', nota: 8 }
-                ]
+                alunos: []
+            },
+            methods: {
+                limpaFormulario: function (){
+                    this.form = {
+                        nome: '',
+                        email: '',
+                        nota: ''
+                    }
+                },
+                adicionarContatos: function () {
+                    this.alunos.push(this.form)
+                    this.limpaFormulario()
+                }
             }
         })
     </script>
