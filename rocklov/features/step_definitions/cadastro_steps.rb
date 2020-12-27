@@ -1,5 +1,5 @@
 Dado('que acesso a pagina de cadastro') do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit "http://rocklov-web:3000/singup"
 end
 
 Quando('submeto o meu cadastro completo') do
