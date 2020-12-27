@@ -4,7 +4,7 @@
         Quero fazer o meu cadastro no RockLov
         Para que eu possa disponibilizá-los para locação
 
-        @temp
+        @macgyver
         Cenario: Fazer cadastro
 
             Dado que acesso a pagina de cadastro
