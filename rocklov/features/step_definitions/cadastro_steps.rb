@@ -15,6 +15,20 @@ Quando('submeto o meu cadastro completo') do
   click_button "Cadastrar"
 end
 
+Quando('submeto o seguinte formulario de cadastro') do |table|
+  # table is a Cucumber::MultilineArgument::DataTable
+
+  user = table.hashes.first
+
+  MongoDB.new.remove_user(user[:email])
+
+  find("#fullName").set user[:nome]
+  find("#email").set user[:email]
+  find("#password").set user[:senha]
+
+  click_button "Cadastrar"
+end
+
 Então('sou redirecionado para o dashboard') do
   expect(page).to have_css ".dashboard"
 end
