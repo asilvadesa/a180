@@ -13,38 +13,16 @@
                 | Anderson Silva  | asilvadesa@gmail.com | pwd123 |
             Então sou redirecionado para o dashboard
 
-        @tentativa_cadastro
-        Cenário: Submeter cadastro sem o nome
-
+        Esquema do Cenario: Tentativas de cadastro
             Dado que acesso a pagina de cadastro
             Quando submeto o seguinte formulario de cadastro
-                |       nome      |         email        | senha  |
-                |                 | asilvadesa@gmail.com | pwd123 |
-            Então vejo a mensagem de alerta: "Oops. Informe seu nome completo!"
+                |       nome      |     email     |     senha     |
+                |   <nome_input>  | <email_input> | <senha_input> |
+            Então vejo a mensagem de alerta: "<mensagem_output>"
 
-        @tentativa_cadastro
-        Cenário: Submeter cadastro sem o email
-
-            Dado que acesso a pagina de cadastro
-            Quando submeto o seguinte formulario de cadastro
-                |       nome      |         email        | senha  |
-                | Anderson Silva  |                      | pwd123 |
-            Então vejo a mensagem de alerta: "Oops. Informe um email válido!"
-
-        @tentativa_cadastro
-        Cenário: Submeter cadastro com email incorreto
-
-            Dado que acesso a pagina de cadastro
-            Quando submeto o seguinte formulario de cadastro
-                |       nome      |         email        | senha  |
-                | Anderson Silva  | asilvadesa*gmail.com | pwd123 |
-            Então vejo a mensagem de alerta: "Oops. Informe um email válido!"
-
-        @tentativa_cadastro
-        Cenário: Submeter cadastro sem senha
-
-            Dado que acesso a pagina de cadastro
-            Quando submeto o seguinte formulario de cadastro
-                |       nome      |         email        | senha  |
-                | Anderson Silva  | asilvadesa@gmail.com |        |
-            Então vejo a mensagem de alerta: "Oops. Informe sua senha secreta!"
+            Exemplos:
+            |    nome_input   |      email_input     | senha_input |         mensagem_output          |
+            |                 | asilvadesa@gmail.com |    pwd123   | Oops. Informe seu nome completo! |
+            | Anderson Silva  |                      |    pwd123   | Oops. Informe um email válido!   |
+            | Anderson Silva  | asilvadesa*gmail.com |    pwd123   | Oops. Informe um email válido!   |
+            | Anderson Silva  | asilvadesa@gmail.com |             | Oops. Informe sua senha secreta! |
