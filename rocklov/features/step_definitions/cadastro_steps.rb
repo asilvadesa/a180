@@ -1,10 +1,15 @@
+
+
 Dado('que acesso a pagina de cadastro') do
   visit "http://rocklov-web:3000/signup"
 end
 
 Quando('submeto o meu cadastro completo') do
+
+  MongoDB.new.remove_user("asilvadesa@gmail.com")
+
   find("#fullName").set "Anderson Silva de Sa"
-  find("#email").set Faker::Internet.free_email
+  find("#email").set "asilvadesa@gmail.com"
   find("#password").set "pwd123"
 
   click_button "Cadastrar"
