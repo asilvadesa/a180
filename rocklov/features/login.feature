@@ -5,39 +5,22 @@ Funcionalidade:
     Quero acessar o sistema da Rocklov
     Para que eu possa anunciar meus equipamentos musicais
 
-    @temp
     Cenario: Login do usuário
 
         Dado que acesso a página principal
         Quando submeto minhas credenciais de email "asilvagit@gmail.com" e senha "pwd123"
         Então sou redirecionado para o dashboard
 
-    Cenario: Senha incorreta
+    Esquema do Cenario: Logins invalidos
 
         Dado que acesso a página principal
-        Quando submeto minhas credenciais com senha incorreta
-        Então vejo a mensagem de alerta: Usuário e/ou senha inválidos.
+        Quando submeto minhas credenciais de email "<email_input>" e senha "<senha_input>"
+        Então vejo a mensagem de alerta: "<mensagem_output>"
 
-    Cenário: Email não cadastrado
-
-        Dado que acesso a página principal
-        Quando submeto minhas credenciais com email que não existe na Rocklov
-        Então vejo a mensagem de alerta: Usuário e/ou senha inválidos.
-
-    Cenario: Email incorreto
-
-        Dado que acesso a página principal
-        Quando submeto minhas credenciais com email incorreto
-        Então vejo a mensagem de alerta: Oops. Informe um email válido!
-
-    Cenario: Email não informado
-
-        Dado que acesso a página principal
-        Quando submeto minhas credenciais sem o email
-        Então vejo a mensagem de alerta: Oops. Informe um email válido!
-
-    Cenario: Senha não informada
-
-        Dado que acesso a página principal
-        Quando submeto minhas credenciais sem a senha
-        Então vejo a mensagem de alerta: ops. Informe sua senha secreta!
+        Exemplos:
+            |      email_input    | senha_input | mensagem_output |
+            | asilvagit@gmail.com | abc123      | Usuário e/ou senha inválidos. |
+            | asilvagit@yahoo.com | abc123      | Usuário e/ou senha inválidos. |
+            | asilvagit&yahoo.com | abc123      | Oops. Informe um email válido! |
+            |                     | abc123      | Oops. Informe um email válido! |
+            | asilvagit@yahoo.com |             | Oops. Informe sua senha secreta! |
