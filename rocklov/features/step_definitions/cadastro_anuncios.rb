@@ -26,11 +26,12 @@ Quando('submeto o cadastro desse item') do
   find("#category").find('option', text: @anuncio[:categoria]).select_option
   find("input[placeholder^=Valor]").set @anuncio[:preco]
 
-  #click_button "Cadastrar"
-  sleep 10
+  click_button "Cadastrar"
 end
 
 Entao('deve ser esse item no meu Dashboard') do
-  pending # Write code here that turns the phrase above into concrete actions
+  anuncios = find(".equipo-list")
+  expect(anuncios).to have_content @anuncio[:nome]
+  expect(anuncios).to have_content "R$#{@anuncio[:preco]}/dia"
 end
 
