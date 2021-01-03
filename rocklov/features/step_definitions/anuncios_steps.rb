@@ -1,7 +1,7 @@
 Dado('que estou logado como {string} e {string}') do |email, senha|
   @email =  email
   visit "/"
-  find("input[placeholder='Seu e-email']").set email
+  find("input[placeholder='Seu email']").set email
   find("input[type=password]").set senha
   click_button "Entrar"
 
