@@ -1,9 +1,8 @@
 Dado('que estou logado como {string} e {string}') do |email, senha|
   @email =  email
 
-  login_page = LoginPage.new
-  login_page.open
-  login_page.with(email, senha)
+  @login_page.open
+  @login_page.with(email, senha)
 
 end
 
