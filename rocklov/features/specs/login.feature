@@ -5,6 +5,7 @@ Funcionalidade:
     Quero acessar o sistema da Rocklov
     Para que eu possa anunciar meus equipamentos musicais
 
+    @login
     Cenario: Login do usuário
 
         Dado que acesso a página principal

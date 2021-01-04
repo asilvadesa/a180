@@ -3,7 +3,9 @@ Dado('que acesso a página principal') do
 end
 
 Quando('submeto minhas credenciais de email {string} e senha {string}') do |email, senha|
-  find("input[placeholder='Seu email']").set email
-  find("input[type=password]").set senha
-  click_button "Entrar"
+  login_page = LoginPage.new
+  login_page.abrir
+  login_page.campo_email.set email
+  login_page.campo_senha.set senha
+  login_page.botao_entrar
 end
