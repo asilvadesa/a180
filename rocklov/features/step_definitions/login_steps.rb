@@ -4,8 +4,6 @@ end
 
 Quando('submeto minhas credenciais de email {string} e senha {string}') do |email, senha|
   login_page = LoginPage.new
-  login_page.abrir
-  login_page.campo_email.set email
-  login_page.campo_senha.set senha
-  login_page.botao_entrar
+  login_page.open
+  login_page.with(email, senha)
 end

@@ -2,19 +2,13 @@
 class LoginPage
   include Capybara::DSL
 
-  def abrir
+  def open
     visit "/"
   end
 
-  def campo_email
-    return find("input[placeholder='Seu email']")
-  end
-
-  def campo_senha
-    return find("input[type=password]")
-  end
-
-  def botao_entrar
-    return click_button "Entrar"
+  def with(email, senha)
+    find("input[placeholder='Seu email']").set email
+    find("input[type=password]").set senha
+    click_button "Entrar"
   end
 end
