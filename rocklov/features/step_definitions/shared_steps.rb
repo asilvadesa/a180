@@ -3,6 +3,5 @@ Então('sou redirecionado para o dashboard') do
 end
 
 Então('vejo a mensagem de alerta: {string}') do |alert_expect|
-  alert = find(".alert-dark")
-  expect(alert.text).to eql alert_expect
+  expect(@alert.dark).to eql alert_expect
 end
