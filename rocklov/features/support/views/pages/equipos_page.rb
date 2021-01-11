@@ -5,9 +5,7 @@ class EquiposPage
     # checkpoint com timeout explícito
     page.has_css?("#equipoForm")
 
-    imagem = Dir.pwd + "/features/support/fixtures/images/" + equipo[:thumb]
-
-    find("#thumbnail input[type=file]", visible: false).set imagem
+    upload(equipo[:thumb]) if equipo[:thumb].length > 0
 
     find("input[placeholder$=equipamento]").set equipo[:nome]
     find("#category").find('option', text: equipo[:categoria]).select_option
@@ -15,4 +13,11 @@ class EquiposPage
 
     click_button "Cadastrar"
   end
+
+  def upload(file_name)
+    imagem = Dir.pwd + "/features/support/fixtures/images/" + file_name
+
+    find("#thumbnail input[type=file]", visible: false).set imagem
+  end
+
 end
