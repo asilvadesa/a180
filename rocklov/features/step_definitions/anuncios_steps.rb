@@ -1,8 +1,7 @@
-Dado('que estou logado como {string} e {string}') do |email, senha|
+Dado('Login com {string} e {string}') do |email, senha|
   @email =  email
   @login_page.open
   @login_page.with(email, senha)
-
 end
 
 Dado('que acesso o formulario de cadastro de anuncios') do

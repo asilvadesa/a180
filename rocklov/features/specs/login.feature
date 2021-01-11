@@ -19,9 +19,9 @@ Funcionalidade:
         Então vejo a mensagem de alerta: "<mensagem_output>"
 
         Exemplos:
-            |      email_input    | senha_input | mensagem_output |
-            | asilvagit@gmail.com | abc123      | Usuário e/ou senha inválidos. |
-            | asilvagit@yahoo.com | abc123      | Usuário e/ou senha inválidos. |
-            | asilvagit&yahoo.com | abc123      | Oops. Informe um email válido! |
-            |                     | abc123      | Oops. Informe um email válido! |
+            | email_input         | senha_input | mensagem_output                  |
+            | asilvagit@gmail.com | abc123      | Usuário e/ou senha inválidos.    |
+            | asilvagit@yahoo.com | abc123      | Usuário e/ou senha inválidos.    |
+            | asilvagit&yahoo.com | abc123      | Oops. Informe um email válido!   |
+            |                     | abc123      | Oops. Informe um email válido!   |
             | asilvagit@yahoo.com |             | Oops. Informe sua senha secreta! |
