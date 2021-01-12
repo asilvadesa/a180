@@ -33,8 +33,10 @@ Funcionalidade: Cadastro de Anúncios
     Entao deve conter a mensagem "<mensagem_output>"
 
     Exemplos:
-      | foto          | nome          | categoria | preco | mensagem_output                   |
-      |               | Ferder Strato | Cordas    | 200   | Adicione uma foto no seu anúncio! |
-      | clarinete.jpg |               | Outros    | 150   | Informe a descrição do anúncio!   |
-      | violino.jpg   | Violino       |           | 300   | Informe a categoria               |
-      | baixo.jpg     | Baixo         | Cordas    |       | Informe o valor da diária         |
+      | foto          | nome          | categoria | preco | mensagem_output                      |
+      |               | Ferder Strato | Cordas    | 200   | Adicione uma foto no seu anúncio!    |
+      | clarinete.jpg |               | Outros    | 150   | Informe a descrição do anúncio!      |
+      | violino.jpg   | Violino       |           | 300   | Informe a categoria                  |
+      | baixo.jpg     | Baixo         | Cordas    |       | Informe o valor da diária            |
+      | baixo.jpg     | Baixo         | Cordas    | abc   | O valor da diária deve ser numérico! |
+      | baixo.jpg     | Baixo         | Cordas    | 100b  | O valor da diária deve ser numérico! |
