@@ -1,2 +1,4 @@
 ---
-default: --publish-quiet
+default: --publish-quiet -p bdd
+bdd: -f pretty
+dots: -f progress
