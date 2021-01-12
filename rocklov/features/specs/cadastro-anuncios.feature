@@ -12,22 +12,29 @@ Funcionalidade: Cadastro de Anúncios
 
     Dado que acesso o formulario de cadastro de anuncios
     E que eu tenha o seguinte equipamento
-      | thumb      | fender-sb.jpg |
-      | nome       | Fender Strato |
-      | categoria  | Cordas        |
-      | preco      | 200           |
+      | thumb     | fender-sb.jpg |
+      | nome      | Fender Strato |
+      | categoria | Cordas        |
+      | preco     | 200           |
 
     Quando submeto o cadastro desse item
     Entao deve ser esse item no meu Dashboard
 
-
-  Cenario: Anuncio sem foto
+  @temp
+  Esquema do Cenario: : Tentavias de login de cadastro de anuncios
     Dado que acesso o formulario de cadastro de anuncios
     E que eu tenha o seguinte equipamento
-      | thumb      |               |
-      | nome       | Fender Strato |
-      | categoria  | Cordas        |
-      | preco      | 200           |
+      | thumb     | <foto>      |
+      | nome      | <nome>      |
+      | categoria | <categoria> |
+      | preco     | <preco>     |
 
     Quando submeto o cadastro desse item
-    Entao deve conter a mensagem "Adicione uma foto no seu anúncio!"
+    Entao deve conter a mensagem "<mensagem_output>"
+
+    Exemplos:
+      | foto          | nome          | categoria | preco | mensagem_output                   |
+      |               | Ferder Strato | Cordas    | 200   | Adicione uma foto no seu anúncio! |
+      | clarinete.jpg |               | Outros    | 150   | Informe a descrição do anúncio!   |
+      | violino.jpg   | Violino       |           | 300   | Informe a categoria               |
+      | baixo.jpg     | Baixo         | Cordas    |       | Informe o valor da diária         |

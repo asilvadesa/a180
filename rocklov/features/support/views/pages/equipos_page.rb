@@ -8,7 +8,7 @@ class EquiposPage
     upload(equipo[:thumb]) if equipo[:thumb].length > 0
 
     find("input[placeholder$=equipamento]").set equipo[:nome]
-    find("#category").find('option', text: equipo[:categoria]).select_option
+    select_opt(equipo[:categoria]) if equipo[:categoria].length > 0
     find("input[placeholder^=Valor]").set equipo[:preco]
 
     click_button "Cadastrar"
@@ -16,8 +16,11 @@ class EquiposPage
 
   def upload(file_name)
     imagem = Dir.pwd + "/features/support/fixtures/images/" + file_name
-
     find("#thumbnail input[type=file]", visible: false).set imagem
+  end
+
+  def select_opt(categoria)
+    find("#category").find('option', text: categoria).select_option
   end
 
 end
