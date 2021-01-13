@@ -1,8 +1,12 @@
 ---
-default: --publish-quiet -p bdd -p allure -p local
+default: --publish-quiet -p bdd -p allure -p local -p firefox
 bdd: -f pretty
 dots: -f progress
 html: -f html -o logs/report.html
 allure: --format AllureCucumber::CucumberFormatter --out=logs
 local: CONFIG=local.yml
 hmg: CONFIG=hmg.yml
+firefox: BROWSER=firefox
+firefox_headless: BROWSER=fire_headless
+chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless
