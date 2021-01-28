@@ -4,8 +4,7 @@ class Sessions
   include HTTParty
   base_uri "http://rocklov-api:3333"
 
-  def login(email, password)
-    payload = {email: email, password: password}
+  def login(payload)
 
     return self.class.post(
       "/sessions",
