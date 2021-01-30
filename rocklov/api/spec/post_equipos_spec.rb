@@ -7,16 +7,12 @@ describe "POST /equipos" do
 
   context "Novo equipo" do
     before(:all) do
-
-      thumbnail = File.open(File.join(Dir.pwd, "spec/fixtures/images", "kramer.jpg"), "rb")
-
       payload = {
-        "thumbnail": thumbnail,
+        "thumbnail": Helpers::get_thumbnail("kramer.jpg"),
         "name": "Kramer",
         "category": "Cordas",
         "price": 299
       }
-
       MongoDB.new.remove_equipo(payload[:name], @user_id)
       @result = Equipos.new.create(payload, @user_id)
     end
@@ -28,16 +24,12 @@ describe "POST /equipos" do
 
   context "Nao autorizado" do
     before(:all) do
-
-      thumbnail = File.open(File.join(Dir.pwd, "spec/fixtures/images", "baixo.jpg"), "rb")
-
       payload = {
-        "thumbnail": thumbnail,
+        "thumbnail": Helpers::get_thumbnail("baixo.jpg"),
         "name": "Contra Baixo",
         "category": "Cordas",
         "price": 100
       }
-
       @result = Equipos.new.create(payload, nil)
     end
 
