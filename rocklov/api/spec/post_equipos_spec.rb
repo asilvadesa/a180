@@ -16,10 +16,10 @@ describe "POST /equipos" do
         "category": "Cordas",
         "price": 299
       }
+
+      MongoDB.new.remove_equipo(payload[:name], @user_id)
       @result = Equipos.new.create(payload, @user_id)
     end
-
-
 
     it "deve retornar 200" do
       expect(@result.code).to eql 200
