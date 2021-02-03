@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="34" skipped="0" failures="0" errors="0" time="1.656395" timestamp="2021-02-03T15:13:20-04:00" hostname="DESKTOP-2PR2JI3">
+<properties>
+<property name="seed" value="22037"/>
+</properties>
+<testcase classname="spec.scenarios.booking_post_spec" name="POST /equipos/{equipo_id}/bookings Solicitar locacao deve retonar 200" file="./spec/scenarios/booking_post_spec.rb" time="0.004213"></testcase>
+<testcase classname="spec.scenarios.equipos_delete_spec" name="DELETE /equipos/{equipos_id} Deleta unico equipo deve retornar 204" file="./spec/scenarios/equipos_delete_spec.rb" time="0.000197"></testcase>
+<testcase classname="spec.scenarios.equipos_delete_spec" name="DELETE /equipos/{equipos_id} Equipo nao existe deve retornar 204" file="./spec/scenarios/equipos_delete_spec.rb" time="0.000379"></testcase>
+<testcase classname="spec.scenarios.equipos_get_spec" name="GET /equipos/{equipos_id} Obtem unico equipo deve retornar 200" file="./spec/scenarios/equipos_get_spec.rb" time="0.000130"></testcase>
+<testcase classname="spec.scenarios.equipos_get_spec" name="GET /equipos/{equipos_id} Obtem unico equipo deve retornar o nome" file="./spec/scenarios/equipos_get_spec.rb" time="0.008933"></testcase>
+<testcase classname="spec.scenarios.equipos_get_spec" name="GET /equipos/{equipos_id} Equipo nao existe deve retornar 404" file="./spec/scenarios/equipos_get_spec.rb" time="0.000198"></testcase>
+<testcase classname="spec.scenarios.equipos_get_spec" name="GET /equipos obter uma lista deve retornar 200" file="./spec/scenarios/equipos_get_spec.rb" time="0.000226"></testcase>
+<testcase classname="spec.scenarios.equipos_get_spec" name="GET /equipos obter uma lista deve retornar uma lista" file="./spec/scenarios/equipos_get_spec.rb" time="0.008828"></testcase>
+<testcase classname="spec.scenarios.equipos_post_spec" name="POST /equipos Novo equipo deve retornar 200" file="./spec/scenarios/equipos_post_spec.rb" time="0.000242"></testcase>
+<testcase classname="spec.scenarios.equipos_post_spec" name="POST /equipos Nao autorizado deve retornar 401" file="./spec/scenarios/equipos_post_spec.rb" time="0.000200"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions login com sucesso valida status code" file="./spec/scenarios/sessions_post_spec.rb" time="0.000329"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions login com sucesso valida id do usuario" file="./spec/scenarios/sessions_post_spec.rb" time="0.000289"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions senha invalida valida status code 401" file="./spec/scenarios/sessions_post_spec.rb" time="0.000227"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions senha invalida valida id do usuario" file="./spec/scenarios/sessions_post_spec.rb" time="0.000303"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions email invalido valida status code 401" file="./spec/scenarios/sessions_post_spec.rb" time="0.000243"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions email invalido valida id do usuario" file="./spec/scenarios/sessions_post_spec.rb" time="0.000228"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions campo email branco valida status code 412" file="./spec/scenarios/sessions_post_spec.rb" time="0.000213"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions campo email branco valida id do usuario" file="./spec/scenarios/sessions_post_spec.rb" time="0.000390"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions sem campo email valida status code 412" file="./spec/scenarios/sessions_post_spec.rb" time="0.000300"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions sem campo email valida id do usuario" file="./spec/scenarios/sessions_post_spec.rb" time="0.000298"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions senha em branco valida status code 412" file="./spec/scenarios/sessions_post_spec.rb" time="0.000207"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions senha em branco valida id do usuario" file="./spec/scenarios/sessions_post_spec.rb" time="0.000680"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions sem campo senha valida status code 412" file="./spec/scenarios/sessions_post_spec.rb" time="0.000230"></testcase>
+<testcase classname="spec.scenarios.sessions_post_spec" name="POST /sessions sem campo senha valida id do usuario" file="./spec/scenarios/sessions_post_spec.rb" time="0.000180"></testcase>
+<testcase classname="spec.scenarios.signup_post_spec" name="POST /signup Novo usuario valida status code" file="./spec/scenarios/signup_post_spec.rb" time="0.000247"></testcase>
+<testcase classname="spec.scenarios.signup_post_spec" name="POST /signup Novo usuario valida id do usuario" file="./spec/scenarios/signup_post_spec.rb" time="0.000316"></testcase>
+<testcase classname="spec.scenarios.signup_post_spec" name="POST /signup Usuario ja existe valida status code 409" file="./spec/scenarios/signup_post_spec.rb" time="0.000208"></testcase>
+<testcase classname="spec.scenarios.signup_post_spec" name="POST /signup Usuario ja existe valida id do usuario" file="./spec/scenarios/signup_post_spec.rb" time="0.000200"></testcase>
+<testcase classname="spec.scenarios.signup_post_spec" name="POST /signup Nome Vazio valida status code 412" file="./spec/scenarios/signup_post_spec.rb" time="0.000192"></testcase>
+<testcase classname="spec.scenarios.signup_post_spec" name="POST /signup Nome Vazio valida id do usuario" file="./spec/scenarios/signup_post_spec.rb" time="0.000191"></testcase>
+<testcase classname="spec.scenarios.signup_post_spec" name="POST /signup Email vazio valida status code 412" file="./spec/scenarios/signup_post_spec.rb" time="0.000219"></testcase>
+<testcase classname="spec.scenarios.signup_post_spec" name="POST /signup Email vazio valida id do usuario" file="./spec/scenarios/signup_post_spec.rb" time="0.000470"></testcase>
+<testcase classname="spec.scenarios.signup_post_spec" name="POST /signup Senha Vazia valida status code 412" file="./spec/scenarios/signup_post_spec.rb" time="0.000224"></testcase>
+<testcase classname="spec.scenarios.signup_post_spec" name="POST /signup Senha Vazia valida id do usuario" file="./spec/scenarios/signup_post_spec.rb" time="0.000540"></testcase>
+</testsuite>
