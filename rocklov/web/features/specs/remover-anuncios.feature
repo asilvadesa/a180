@@ -5,6 +5,10 @@
     Quero poder remover esse anuncio
     Para que eu possa manter o meu Dashboard atualizado
 
+    Contexto: Login
+      * Login com "spider@gmail.com" e "pwd123"
+
+    @remover_anuncio
     Cenario: Remover um anuncio
 
       Dado que eu tenha um anuncio indesejado
