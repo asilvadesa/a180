@@ -34,7 +34,16 @@ end
 Dado('que eu tenha um anuncio indesejado') do |table|
 
   user_id = page.execute_script("return localStorage.getItem('user')")
-  log user_id
+
+  thumbnail = File.open(File.join(Dir.pwd, "features/support/fixtures/images", table.rows_hash), "rb")
+
+  equipo = [
+    thumbnail: thumbnail,
+    name: table.rows_hash[:nome],
+    category: table.rows_hash[:categoria],
+    price: table.rows_hash[:preco]
+  ]
+  EquiposService.create.new(equipo, user_id)
 end
 
 Quando('eu solicito a exclusão desse item') do
