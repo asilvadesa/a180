@@ -20,7 +20,7 @@ Quando('submeto o cadastro desse item') do
   @equipos_page.create(@anuncio)
 end
 
-Entao('deve ser esse item no meu Dashboard') do
+Entao('deve ver esse item no meu Dashboard') do
   expect(@dash_page.equipo_list).to have_content @anuncio[:nome]
   expect(@dash_page.equipo_list).to have_content "R$#{@anuncio[:preco]}/dia"
 end
@@ -59,4 +59,14 @@ end
 
 Entao('nao devo ver esse item no meu Dashboard') do
   expect(@dash_page.has_no_equipo?(@equipo[:name])).to be true
+end
+
+# Desistir Remover
+
+Quando('não confirmo a exclusão') do
+  @dash_page.cancel_remove
+end
+
+Entao('esse item deve permanecer no meu Dashboard') do
+  expect(@dash_page.equipo_list).to have_content @equipo[:name]
 end
