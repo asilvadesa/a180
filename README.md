@@ -8,3 +8,4 @@ Curso QA Ninja - Automação 180 (Ruby, Capybara, Cucumber e Selenium)
 2) Run -> bundle init
 3) Add gem on GemFile
 3) Run -> bundle install
+4) Run -> cucumber --init
